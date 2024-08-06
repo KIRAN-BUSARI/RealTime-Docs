@@ -34,3 +34,25 @@ export const createDocument = async ({
     console.log(`Error happening while creating a room ${error}`);
   }
 };
+
+export const getDocument = async ({
+  roomId,
+  userId,
+}: {
+  roomId: string;
+  userId: string;
+}) => {
+  try {
+    const room = await liveblocks.getRoom(roomId);
+
+    // TODO: undo it
+    // const hasAccess = Object.keys(room.usersAccesses).includes(userId);
+    // if (!hasAccess) {
+    //   throw new Error("You don't have access to this room");
+    // }
+
+    return parseStringify(room);
+  } catch (error) {
+    console.log(`Error happening while getting a room ${error}`);
+  }
+};
