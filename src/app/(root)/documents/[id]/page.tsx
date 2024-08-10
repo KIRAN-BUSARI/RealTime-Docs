@@ -8,7 +8,7 @@ const Document = async ({ params: { id } }: SearchParamProps) => {
 
   if (!clerkUser) redirect("/sign-in");
 
-  const room = await getDocument({
+  const room = getDocument({
     roomId: id,
     userId: clerkUser.emailAddresses[0].emailAddress,
   });
