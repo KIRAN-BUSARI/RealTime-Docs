@@ -65,6 +65,10 @@ const Home = async () => {
                   </div>
                 </Link>
                 {/* TODO: Add delete button */}
+                <DeleteDocumentBtn
+                  roomId={id}
+                  email={clerkUser.emailAddresses[0].emailAddress}
+                />
               </li>
             ))}
           </ul>
