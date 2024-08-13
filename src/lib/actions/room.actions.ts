@@ -16,7 +16,7 @@ export const createDocument = async ({
     const metadata = {
       creatorId: userId,
       email,
-      title: "Untitled",
+      title: "Untitled Document",
     };
 
     const usersAccesses: RoomAccesses = {
@@ -71,5 +71,15 @@ export const updateDocument = async (roomId: string, title: string) => {
     return parseStringify(updatedRoom);
   } catch (error) {
     console.log(error);
+  }
+};
+
+export const getDocuments = async (email: string) => {
+  try {
+    const rooms = await liveblocks.getRooms({ userId: email });
+
+    return parseStringify(rooms);
+  } catch (error) {
+    console.log(`Error happened while getting rooms: ${error}`);
   }
 };
