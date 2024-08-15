@@ -1,14 +1,14 @@
+import React from "react";
 import AddDocumentBtn from "@/components/AddDocumentBtn";
 import DeleteDocumentBtn from "@/components/DeleteDocumentBtn";
 import Header from "@/components/Header";
+import Image from "next/image";
+import Link from "next/link";
 import { getDocuments } from "@/lib/actions/room.actions";
 import { dateConverter } from "@/lib/utils";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
-import Image from "next/image";
-import Link from "next/link";
 import { redirect } from "next/navigation";
-import React from "react";
 
 const Home = async () => {
   const clerkUser = await currentUser();
