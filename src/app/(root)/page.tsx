@@ -1,6 +1,6 @@
 import React from "react";
 import AddDocumentBtn from "@/components/AddDocumentBtn";
-import DeleteDocumentBtn from "@/components/DeleteDocumentBtn";
+import { DeleteModal } from "@/components/DeleteModal";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
@@ -64,11 +64,7 @@ const Home = async () => {
                     </p>
                   </div>
                 </Link>
-                {/* TODO: Add delete button */}
-                <DeleteDocumentBtn
-                  roomId={id}
-                  email={clerkUser.emailAddresses[0].emailAddress}
-                />
+                <DeleteModal roomId={id} />
               </li>
             ))}
           </ul>
