@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import CollaboratedRoom from "@/components/CollaboratedRoom";
 import { getDocument } from "@/lib/actions/room.actions";
 import { getClerkUsers } from "@/lib/actions/user.actions";

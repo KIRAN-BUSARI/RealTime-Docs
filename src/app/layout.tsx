@@ -1,4 +1,5 @@
 import "./globals.css";
+export const runtime = "edge";
 
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";

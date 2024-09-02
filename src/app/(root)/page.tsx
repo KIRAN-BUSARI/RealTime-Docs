@@ -1,3 +1,4 @@
+export const runtime = "edge";
 import React from "react";
 import AddDocumentBtn from "@/components/AddDocumentBtn";
 import { DeleteModal } from "@/components/DeleteModal";
